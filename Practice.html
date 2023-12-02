@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=5in, height=7in">
+    <title>Enrollment Form</title>
+    <style>
+        body {
+            background-color: rgb(63, 63, 241); /* Blue background color */
+            color: white; /* White text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 100%;
+            background-color: rgba(82, 219, 243, 0.1); /* Slightly transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        label, input, select, textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.3); /* Slightly transparent white background for input fields */
+            border-radius: 5px;
+            color: #000; /* Black text color for input fields */
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* Blue submit button color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Enrollment Form</h1>
+    <form action="process_enrollment.php" method="POST">
+        <label for="last_name">Student's Name (Last Name):</label>
+        <input type="text" id="last_name" name="last_name" required> 
+
+        <label for="first_name">Student's Name (First Name):</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="dob_month">Student's Date of Birth (Month):</label>
+        <input type="text" id="dob_month" name="dob_month" required>
+
+        <label for="dob_day">Student's Date of Birth (Day):</label>
+        <input type="text" id="dob_day" name="dob_day" required>
+
+        <label for="dob_year">Student's Date of Birth (Year):</label>
+        <input type="text" id="dob_year" name="dob_year" required>
+
+        <label for="lrn">LRN (Learner Reference Number):</label>
+        <input type="text" id="lrn" name="lrn" required>
+
+        <label for="ethnicity">Ethnicity:</label>
+        <input type="text" id="ethnicity" name="ethnicity">
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female">Female</label>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="current_address">Current Address:</label>
+        <textarea id="current_address" name="current_address" rows="1" required></textarea>
+
+        <label for="father_name">Father's Name:</label>
+        <input type="text" id="father_name" name="father_name" required>
+
+        <label for="mother_guardian">Mother and Guardian:</label>
+        <input type="text" id="mother_guardian" name="mother_guardian" required>
+
+        <label for="telephone">Telephone No.:</label>
+        <input type="tel" id="telephone" name="telephone">
+
+        <label for="grade_level">Grade Level entering Grade 12 (2nd Semester):</label>
+        <input type="text" id="grade_level" name="grade_level" required>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
